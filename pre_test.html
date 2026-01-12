@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pre-Test Questionnaire</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Pre-Test Questionnaire</h1>
+
+    <p class="instructions">
+        Please read the following scenario carefully and answer all questions
+        based on the information provided. This assessment evaluates your
+        current understanding of phishing-related threats.
+    </p>
+
+    <!-- SCENARIO -->
+    <div class="scenario-box" style="padding: 10px">
+        <h3>SCENARIO</h3>
+        <p>
+            You receive an email claiming to be from your university’s IT support team.
+            The email states that unusual activity has been detected on your student account
+            and asks you to verify your identity within 24 hours to avoid account suspension.
+            The sender’s email address appears as <strong>it-support@universty-secure.com</strong>.
+            The message contains a link labelled <strong>“Verify Account Now”</strong>.
+            The email uses urgent language and warns that failure to respond may result
+            in loss of access to email and learning portals.
+            There are minor spelling mistakes throughout the message.
+            The greeting is generic and does not include your name.
+            You were not previously informed of any maintenance or security issues.
+            The email also includes a downloadable attachment labelled
+            <strong>“Security_Report.pdf”</strong>.
+        </p>
+    </div>
+
+    <!-- FORM -->
+    <form method="post" action="/save-pre">
+
+        <!-- EMAIL -->
+        <div class="question-card">
+            <label for="email"><strong>Email Address <span style="color:red">*</span></strong></label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   class="input-field"
+                   placeholder="example@email.com"
+                   required>
+        </div>
+
+        <!-- QUESTIONS -->
+
+        <div class="question-card">
+            <p><strong>1. What type of cyber threat does this email MOST likely represent?</strong></p>
+            <label><input type="radio" name="q1" value="A" required> Malware infection</label>
+            <label><input type="radio" name="q1" value="B"> Phishing attack</label>
+            <label><input type="radio" name="q1" value="C"> Ransomware</label>
+            <label><input type="radio" name="q1" value="D"> System update</label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>2. Which part of the sender’s email address is suspicious?</strong></p>
+            <label><input type="radio" name="q2" value="A" required> it-support</label>
+            <label><input type="radio" name="q2" value="B"> @ symbol</label>
+            <label><input type="radio" name="q2" value="C"> Misspelling of university</label>
+            <label><input type="radio" name="q2" value="D"> Use of hyphen</label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>3. Why is the generic greeting suspicious?</strong></p>
+            <label><input type="radio" name="q3" value="A" required> Shows personalization</label>
+            <label><input type="radio" name="q3" value="B"> Confirms identity</label>
+            <label><input type="radio" name="q3" value="C"> Lacks identity verification</label>
+            <label><input type="radio" name="q3" value="D"> Improves security</label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>4. Why is the urgency in the email suspicious?</strong></p>
+            <label><input type="radio" name="q4" value="A" required> Universities never send emails</label>
+            <label><input type="radio" name="q4" value="B"> Phishing uses fear to force action</label>
+            <label><input type="radio" name="q4" value="C"> Urgency improves security</label>
+            <label><input type="radio" name="q4" value="D"> Urgency proves legitimacy</label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>5. What risk is associated with clicking the verification link?</strong></p>
+            <label><input type="radio" name="q5" value="A" required> Software update</label>
+            <label><input type="radio" name="q5" value="B"> Redirect to fake website</label>
+            <label><input type="radio" name="q5" value="C"> Network optimization</label>
+            <label><input type="radio" name="q5" value="D"> Antivirus activation</label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>6. What is the safest initial action after receiving this email?</strong></p>
+            <label><input type="radio" name="q6" value="A" required> Click the link </label>
+            <label><input type="radio" name="q6" value="B"> Reply to the sender </label>
+            <label><input type="radio" name="q6" value="C"> Report or delete the email </label>
+            <label><input type="radio" name="q6" value="D"> Download the attachment </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>7. Why is the attachment potentially dangerous?</strong></p>
+            <label><input type="radio" name="q7" value="A" required> It is too small </label>
+            <label><input type="radio" name="q7" value="B"> Attachments may contain malware </label>
+            <label><input type="radio" name="q7" value="C"> PDFs are always unsafe </label>
+            <label><input type="radio" name="q7" value="D"> Attachments slow systems </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>8. Which factor increases suspicion the MOST?</strong></p>
+            <label><input type="radio" name="q8" value="A" required> Use of university name </label>
+            <label><input type="radio" name="q8" value="B"> Generic greeting </label>
+            <label><input type="radio" name="q8" value="C"> Threat of suspension </label>
+            <label><input type="radio" name="q8" value="D"> Combination of multiple warning signs </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>9. What should you do before trusting such emails?</strong></p>
+            <label><input type="radio" name="q9" value="A" required> Check sender domain </label>
+            <label><input type="radio" name="q9" value="B"> Verify through official channels </label>
+            <label><input type="radio" name="q9" value="C"> Avoid clicking links </label>
+            <label><input type="radio" name="q9" value="D"> All of the above </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>10. What is the purpose of phishing emails like this?</strong></p>
+            <label><input type="radio" name="q10" value="A" required> Improve security </label>
+            <label><input type="radio" name="q10" value="B"> Steal personal information </label>
+            <label><input type="radio" name="q10" value="C"> Provide system updates </label>
+            <label><input type="radio" name="q10" value="D"> Notify users </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>11. Why is the link text misleading?</strong></p>
+            <label><input type="radio" name="q11" value="A" required> It is capitalised </label>
+            <label><input type="radio" name="q11" value="B"> It hides the actual destination UR </label>
+            <label><input type="radio" name="q11" value="C"> It is clickable </label>
+            <label><input type="radio" name="q11" value="D"> It uses HTTPS </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>12. What security principle is violated if you submit credentials?</strong></p>
+            <label><input type="radio" name="q12" value="A" required> Confidentiality </label>
+            <label><input type="radio" name="q12" value="B"> Availability </label>
+            <label><input type="radio" name="q12" value="C"> Performance </label>
+            <label><input type="radio" name="q12" value="D"> Scalability </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>13. What is a red flag in the email content?</strong></p>
+            <label><input type="radio" name="q13" value="A" required> Clear formatting </label>
+            <label><input type="radio" name="q13" value="B"> Proper grammar </label>
+            <label><input type="radio" name="q13" value="C"> Spelling mistakes </label>
+            <label><input type="radio" name="q13" value="D"> University branding </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>14. Which user detail is MOST at risk?</strong></p>
+            <label><input type="radio" name="q14" value="A" required> Screen resolution </label>
+            <label><input type="radio" name="q14" value="B"> Login credentials </label>
+            <label><input type="radio" name="q14" value="C"> Device model </label>
+            <label><input type="radio" name="q14" value="D"> Internet speed </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>15. What does “account suspension threat” aim to trigger?</strong></p>
+            <label><input type="radio" name="q15" value="A" required> Logical thinking </label>
+            <label><input type="radio" name="q15" value="B"> User panic </label>
+            <label><input type="radio" name="q15" value="C"> Encryption </label>
+            <label><input type="radio" name="q15" value="D"> Authentication </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>16. If unsure about the email, what is the BEST verification method?</strong></p>
+            <label><input type="radio" name="q16" value="A" required> Clicking the link </label>
+            <label><input type="radio" name="q16" value="B"> Calling IT via official website </label>
+            <label><input type="radio" name="q16" value="C"> Replying to sender </label>
+            <label><input type="radio" name="q16" value="D"> Downloading attachment </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>17. Why do phishing emails often impersonate trusted institutions?</strong></p>
+            <label><input type="radio" name="q17" value="A" required> To confuse systems </label>
+            <label><input type="radio" name="q17" value="B"> To exploit user trust </label>
+            <label><input type="radio" name="q17" value="C"> To encrypt data </label>
+            <label><input type="radio" name="q17" value="D"> To improve credibility </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>18. What makes this email different from legitimate IT emails?</strong></p>
+            <label><input type="radio" name="q18" value="A" required> Uses email </label>
+            <label><input type="radio" name="q18" value="B"> Requests urgent action </label>
+            <label><input type="radio" name="q18" value="C"> Requests sensitive information unexpectedly </label>
+            <label><input type="radio" name="q18" value="D"> Mentions security </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>19. What should universities encourage users to do?</strong></p>
+            <label><input type="radio" name="q19" value="A" required> Respond quickly </label>
+            <label><input type="radio" name="q19" value="B"> Share credentials </label>
+            <label><input type="radio" name="q19" value="C"> Report suspicious emails </label>
+            <label><input type="radio" name="q19" value="D"> Ignore all emails </label>
+        </div>
+
+        <div class="question-card">
+            <p><strong>20. What is the MOST appropriate final action?</strong></p>
+            <label><input type="radio" name="q20" value="A" required> Verify via official portal </label>
+            <label><input type="radio" name="q20" value="B"> Delete and report email </label>
+            <label><input type="radio" name="q20" value="C"> Download attachment </label>
+            <label><input type="radio" name="q20" value="D"> Respond asking for details </label>
+        </div>
+
+
+        <button type="submit" class="btn-primary">
+            Continue to Awareness Module
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

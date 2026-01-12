@@ -1,0 +1,41 @@
+</br>
+<h2>Participant Results</h2>
+
+<div style="margin-top:20px;">
+    <a href="/admin/export" class="btn-primary">
+        Download CSV Dataset
+    </a>
+</div>
+
+<br>
+
+<table border="1" width="100%" style="font-size:12px;">
+    <tr>
+        <th>ID</th>
+        <th>Email</th>
+
+        {% for i in range(1,21) %}
+            <th>Pre Q{{ i }}</th>
+        {% endfor %}
+
+        {% for i in range(1,21) %}
+            <th>Post Q{{ i }}</th>
+        {% endfor %}
+    </tr>
+
+    {% for r in full_data %}
+    <tr>
+        <td>{{ r.id }}</td>
+        <td>{{ r.email }}</td>
+
+        {% for i in range(1,21) %}
+            <td>{{ r["pre_q" ~ i] }}</td>
+        {% endfor %}
+
+        {% for i in range(1,21) %}
+            <td>{{ r["post_q" ~ i] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
